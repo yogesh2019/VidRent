@@ -68,3 +68,42 @@ at the top we need a directive to specify the type of the model for this view
 
 if in this file if we press f5 
 then it will take us to movies.random()
+
+
+this def looks ugly
+our asp.net app uses bootstrap as css framework
+
+bootswatch
+
+so under lumen bootstrap.css
+under the content folder 
+bootstrap-lumen.css
+
+now we need to replace the refrence
+
+under app.start open up bundle config
+
+the bundling reduces the no of http requests	
+
+so we will modify the css bundle
+
+asp.net mvc fundamentals
+entity framework(code first)
+forms 
+validation
+
+we will use api to build restful services
+
+after this we will shift our focus to client side devlopment
+
+we will use identity framwork 
+
+authenticatoin and autherization
+
+performance optimization
+
+building a feature end to end
+
+deployement
+
+*********************************************
