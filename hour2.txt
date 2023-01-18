@@ -107,3 +107,52 @@ building a feature end to end
 deployement
 
 *********************************************
+
+
+this action result is the base class of all the action result in mvc
+
+depending on what action does 
+it will return one of its der classes depending on what action does
+
+here view is just method inherited from base controller class
+alternative we can also do this
+return View(movie)
+return new ViewResult();
+
+we can also change the return type to ViewResult	
+
+we have partialViewResult partialview
+contectResult Content() ===> text
+
+redirect result to redirect the user to a url
+
+redirent to routeResult to redirect to a action
+
+jsonResult to serialize a json() object
+
+FileResult to return a file
+
+httpNotFound to return a 404 error
+
+emptyresult when we need to return a void
+
+lets return content
+
+
+return Content("HELLO WORLD")
+
+return HttpNotFound();
+
+now build the app using ctrl shift b
+w/o opening a new tab in the browser
+
+
+return new EmptyResult();
+
+
+return RedirectToAction("Index","Home", new {name : "name", soryBy: "name"})
+
+
+for the most we will be using view httpnotfound and redirect
+
+
