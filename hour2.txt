@@ -1,0 +1,70 @@
+in our solution ex add one class new movie under Model
+we give a couple of prop 
+like int id and string name
+this is a poko which represent state and behaviour of our app
+here we have only props for this case 
+
+so assuming that this page will be 
+/movies/random
+
+so we need to create a controller 
+called movies controller with action as random
+
+so in solution exp right click controller
+add controlle 
+
+and empty controller
+
+
+so this controller is a very simple class that derives from Controller class
+
+
+here i will change the index to Random
+
+so we will call /moview/random
+
+if we dont use resharper then we have to declare namespace by ourself
+
+if real world app we ofter get Models from database
+
+for now lets just focus on core building blocks of our app
+
+and the reason this view file is red as it is telling us this view doesn't exist		
+
+
+so if we see inside movies under view we dont have view
+
+
+we will create a partial view
+
+that we can use at different placess
+
+so let untick this for now
+
+and let chose that we want a layout 
+
+
+let chose by default layout
+
+here in this block we have two properties
+viewBag.title
+Layout
+
+now if we see view is no longer red
+
+so we will output this model in our view
+
+in out html
+
+<h2>
+	@Model.
+</h2>
+
+at the top we need a directive to specify the type of the model for this view
+
+
+@model lowercase
+@model Vidly.Models.MOvie
+
+if in this file if we press f5 
+then it will take us to movies.random()
