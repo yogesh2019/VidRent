@@ -1,0 +1,90 @@
+0_7 your first mvc app
+under web asp.net web application
+template as mvc
+tfs or git
+
+
+let see what we have got inside this project
+app_date => which is where our database file is stored
+
+
+app_start => which includes few classes which are called when the application is started
+
+	here let take a look at route config
+		here we have a route with name default
+		if url mathes this pattern
+		first part : name of contorller
+		second part: name of the action
+		third part: is the id which we can pass to the action
+
+		with this rule 
+		if we have /movies/popular
+		its gonna hit a popular under movies controller
+
+		we can see we have some default values in here
+		if our routes doesn't have any part it will passed to the route controller
+
+		and also if it only has controller and no action defined
+		then it will hit index metho
+	
+		/movies => moviesController.index()
+
+		and also we can see that id is an optional parameter
+
+contents => 
+	this is where we store css files
+	images and any other client side assets
+
+
+Controller =>
+	our def project has three controllers
+
+
+
+Models => 
+	all of our dommain classes will be here
+
+Scripts => 
+	where we store our js files
+
+Views => 
+	here we have folders named after controllers
+
+
+
+	we have three names with same controller
+	and then we have shared views
+
+
+global.asax
+	class that provides hooks for various events in application lifecycle
+
+
+
+	let see this 
+	so when the application is started this method will be called
+	for ex
+		register routes
+		when the app is started we tell our app
+		that this is routes we will be using
+
+
+package.config
+	which is used by nuget package manager
+
+	we use pack manager to manage dependencies of our application
+	pack manager will download from central repo
+	and help if we need update to newer version
+
+
+startup.cs
+	new approach mic is takind to start the app
+
+
+web.config
+	which is an xml holding configuration for our application
+	
+
+	we will mostly work with connection string 
+	and appSetting
+		
