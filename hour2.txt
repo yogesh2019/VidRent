@@ -213,3 +213,42 @@ pageIndex= 1
 
 if(String.isNullOrWhiteSpace(soryBy))
 sortyBy=name
+
+
+sometimes we need more parameter
+
+
+we need to add a route before a default route	
+
+order should be most specific to most generic
+
+this method has few overloads 
+
+the one we use most of the times is the one with three params
+
+name, url, defaults
+
+for defaults we use anonymous object
+
+
+
+routes.MapRoute(
+ "MovieByReleaseDate",
+ "movies/release/{year}/{month}",
+ new { controller = "Movies",
+  action = "ByReleaseDate"
+  }
+)
+
+now i will show you a quick way to create an action
+
+mvcaction4 tab
+
+this another code snippet
+
+
+now lets add some constraints to our app
+
+we can use regex
+
+
