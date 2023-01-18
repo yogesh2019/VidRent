@@ -155,4 +155,61 @@ return RedirectToAction("Index","Home", new {name : "name", soryBy: "name"})
 
 for the most we will be using view httpnotfound and redirect
 
+we took a look at output params
 
+now lets take a look at input params
+
+the mvc framework looks for the same name in request data
+
+if the variable with that name exists this will pass the value auto to the target action
+
+this can be in the url in the query string 
+
+
+in the data posted using a form
+
+
+in the movies controller i will create a new action
+
+public ActionResult Edit(int id){
+return Content("id"+id)
+
+}
+
+/edit/1
+
+returns id=1
+
+/edit?id=1
+
+return
+id=1
+
+
+what if i name the param to movieId in controller
+
+we can do 
+
+/edit?movieId=1
+
+but we cannot do 
+/edit/1
+
+as the default parameter is id
+
+
+we can also use optional parameter 
+
+public ActionResult Index(int pageIndex, string sortBy)
+
+to make it nullable
+public ActionResult Index(int? pageIndex, string sortBy)
+
+and string in c sharp is nullable
+
+
+if(!pageIndex.HasValue)
+pageIndex= 1
+
+if(String.isNullOrWhiteSpace(soryBy))
+sortyBy=name
