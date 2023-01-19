@@ -301,3 +301,42 @@ public ActionResult ByReleaseYear(int year, int Month){
 
 
 just be aware that there are many contraints
+
+
+earlier we passed our model to the view
+
+there are two ways to pass data to the views 
+
+one way is to use the view data dictionary
+
+every contoller has viewdata which is of type dictionary
+
+ViewData["Movie"]  = movie;
+
+we return View();
+
+
+now instead of using Model property we use viewData
+
+
+now if we do 
+
+@ViewData["movies"].
+
+till now we cannot access name property of our movie
+
+
+we have to cast back 
+
+and the second problem here is we have change back the string here
+
+
+then they introduced viewBag
+
+and 
+
+the way we pass data here is ViewBag.movie
+
+but both are very fragile and we have the change the names in two places in both the cases
+
+
