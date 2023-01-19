@@ -15,5 +15,11 @@ namespace WebApplication1.Controllers
             var movie = new Movies() { Name = "shrek !"};
             return View(movie);
         }
+
+        [Route("movies/released/{year}/{month}")]
+        public ActionResult ByReleaseYear(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
     }
 }

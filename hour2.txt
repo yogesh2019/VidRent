@@ -252,3 +252,52 @@ now lets add some constraints to our app
 we can use regex
 
 
+
+so look at this code 
+currently we have only one custom route here
+
+sooner or later its gonna grow and later it can become a mess
+
+
+
+another thing is you have to go back and forth
+between your actions and custome routes
+
+and the third problem is 
+if we rename our controller
+
+we have to remember to come back to routesConfig and apply the name change
+
+
+with mvc5 
+instead of creating a route here 
+
+we can use an attribute to the corresponding action
+
+
+new version we use attribute routing
+
+
+first you need to enable it 
+
+routes.MapMvcAttributeRoutes();
+
+
+so we delete our conventional route
+
+and go back to the controller
+
+and apply the attribute
+
+[Route("movies/released/{year}/{month}")]
+public ActionResult ByReleaseYear(int year, int Month){
+
+}
+
+[Route("movies/released/{year}/{month: regex(\\d{4}): range(1,12)}")]
+public ActionResult ByReleaseYear(int year, int Month){
+
+}
+
+
+just be aware that there are many contraints
