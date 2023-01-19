@@ -340,3 +340,52 @@ the way we pass data here is ViewBag.movie
 but both are very fragile and we have the change the names in two places in both the cases
 
 
+View Models
+
+what is have to pass the list of movies and list of customers
+
+till now we have only one model property 
+
+So we use ViewModel
+
+viewModel has data specific to that view
+
+first i am gonna add Customer class to our models
+
+lets put our ViewModels in a separate folder
+
+RandomMovieViewModel               convention we used suffix
+
+
+so we need two things here
+
+public Movie Movie {get; set;};
+public List<Customers> Customers {get; set;}
+
+now lets go back to our controller
+
+and create customer also
+
+var customer = new List<Customer> {
+	new Customer{name: "Customer 1"},
+	new Customer{Name: "Customer 2"}
+}
+
+var viewModel = new RandomMovieViewModel{
+	Movie = movie,
+	Customers = customer
+}
+
+return view(viewModel)
+
+so we have to change this
+
+@model Vidly.ViewModels.RandomViewModel
+
+
+@Model.Movie.Name
+
+@Model.Customers
+
+
+
